@@ -14,6 +14,8 @@ const AboutUs = () => {
       <button onClick={() => window.history.back()}>Go Back</button>
 
       <button onClick={malailaija}>Go to home page</button>
+
+      <button onClick={() => window.history.forward()}>Go Forward</button>
     </>
   );
 };
