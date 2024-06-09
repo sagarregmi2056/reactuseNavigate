@@ -23,6 +23,14 @@ const Navbar = () => {
           <li>
             <Link to="/products">products</Link>
           </li>
+
+          <li>
+            <Link to="/category">category</Link>
+          </li>
+
+          <li>
+            <Link to="/results">results</Link>
+          </li>
         </ul>
       </nav>
     </div>

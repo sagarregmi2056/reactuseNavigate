@@ -5,7 +5,7 @@ const Product = () => {
     <>
       <h2>Hi i am product page</h2>
       <h2>
-        <Link to="tshirt">tshirt</Link>
+        <Link to="tshirtniceasdsa">tshirt</Link>
       </h2>
 
       <h2>

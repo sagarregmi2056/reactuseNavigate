@@ -5,13 +5,19 @@ import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
-import PageNotFound from "./pages/PageNotFound";
+
 import PageBroken from "./pages/PageBroken";
-import College from "./pages/College";
-import Campus from "./pages/Campus";
+
 import Product from "./pages/Product";
 import Tshirt from "./pages/Tshirt";
 import Pant from "./pages/Pant";
+import Category from "./pages/Category";
+import Male from "./pages/Male";
+import Female from "./pages/Female";
+import UserDetails from "./pages/UserDetails";
+import Results from "./pages/Results";
+import Pass from "./pages/Pass";
+import Fail from "./pages/Fail";
 
 function App() {
   return (
@@ -21,16 +27,37 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/contact" element={<Contact />}>
+          {/* params in react js */}
+          <Route path="user/:id" element={<UserDetails />} />
+        </Route>
 
         <Route path="/services" element={<Services />} />
+
+        <Route path="/category" element={<Category />}>
+          <Route index element={<Female />} />
+
+          <Route path="male" element={<Male />} />
+
+          <Route path="female" element={<Female />} />
+        </Route>
+
         <Route path="/products" element={<Product />}>
+          {/* index route */}
           <Route index element={<Tshirt />} />
-          <Route path="tshirt" element={<Tshirt />} />
+          {/* nested routing */}
+          <Route path="tshirtniceasdsa" element={<Tshirt />} />
           <Route path="pant" element={<Pant />} />
         </Route>
 
         <Route path="*" element={<PageBroken />} />
+
+        <Route path="/results" element={<Results />}>
+          <Route index element={<Fail />} />
+          <Route path="pass" element={<Pass />} />
+          <Route path="fail" element={<Fail />} />
+        </Route>
       </Routes>
     </>
   );
