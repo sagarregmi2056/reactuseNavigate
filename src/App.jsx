@@ -18,11 +18,23 @@ import UserDetails from "./pages/UserDetails";
 import Results from "./pages/Results";
 import Pass from "./pages/Pass";
 import Fail from "./pages/Fail";
+import Akkar11 from "./pages/Akkar11";
+import StudentDetails from "./pages/StudentDetails";
+import Us from "./pages/Us";
+import Usestatehook from "./pages/Usestatehook";
+import UseEffecthook from "./pages/UseEffecthook";
+import UseStateme from "./pages/UseStateme";
 
 function App() {
   return (
     <>
       <Navbar />
+
+      <Usestatehook />
+      <UseEffecthook />
+
+      <UseStateme />
+      {/* <Us /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -57,6 +69,10 @@ function App() {
           <Route index element={<Fail />} />
           <Route path="pass" element={<Pass />} />
           <Route path="fail" element={<Fail />} />
+        </Route>
+
+        <Route path="/aakar11" element={<Akkar11 />}>
+          <Route path="student/:id" element={<StudentDetails />} />
         </Route>
       </Routes>
     </>
