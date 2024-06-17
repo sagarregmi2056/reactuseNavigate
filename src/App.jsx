@@ -24,6 +24,8 @@ import Us from "./pages/Us";
 import Usestatehook from "./pages/Usestatehook";
 import UseEffecthook from "./pages/UseEffecthook";
 import UseStateme from "./pages/UseStateme";
+import Useobj from "./pages/Useobj";
+import UseStateObj from "./UseStateObj";
 
 function App() {
   return (
@@ -34,6 +36,9 @@ function App() {
       <UseEffecthook />
 
       <UseStateme />
+      <Useobj />
+
+      <UseStateObj />
       {/* <Us /> */}
 
       <Routes>
