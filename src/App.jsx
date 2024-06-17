@@ -20,25 +20,20 @@ import Pass from "./pages/Pass";
 import Fail from "./pages/Fail";
 import Akkar11 from "./pages/Akkar11";
 import StudentDetails from "./pages/StudentDetails";
-import Us from "./pages/Us";
+// import Us from "./pages/Us";
 import Usestatehook from "./pages/Usestatehook";
 import UseEffecthook from "./pages/UseEffecthook";
 import UseStateme from "./pages/UseStateme";
 import Useobj from "./pages/Useobj";
 import UseStateObj from "./UseStateObj";
+import GetApi from "./pages/GetApi";
 
 function App() {
   return (
     <>
       <Navbar />
-
       <Usestatehook />
-      <UseEffecthook />
-
-      <UseStateme />
-      <Useobj />
-
-      <UseStateObj />
+      <GetApi />
       {/* <Us /> */}
 
       <Routes>

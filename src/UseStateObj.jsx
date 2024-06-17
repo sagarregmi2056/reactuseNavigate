@@ -13,11 +13,9 @@ const UseStateObj = () => {
   const [value, setValue] = useState(obj);
 
   const changemystate = () => {
-    setValue((agadikostate) => {
-      return {
-        ...agadikostate,
-        name: "sagar",
-      };
+    setValue({
+      ...value,
+      name: "sagar",
     });
   };
 
