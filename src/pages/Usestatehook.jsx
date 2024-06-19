@@ -15,14 +15,6 @@ const Usestatehook = () => {
   const [myname, setname] = useState(obj);
 
   const changemyname = () => {
-    // setname((pailakojanma) => {
-    //   return {
-    //     ...pailakojanma,
-    //     name: "lenovo",
-    //     age: 20,
-    //   };
-    // });
-
     setname({
       ...myname,
       name: "lenovo",

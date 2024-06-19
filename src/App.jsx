@@ -27,13 +27,41 @@ import UseStateme from "./pages/UseStateme";
 import Useobj from "./pages/Useobj";
 import UseStateObj from "./UseStateObj";
 import GetApi from "./pages/GetApi";
+import CompA from "./pages/CompA";
+import { createContext } from "react";
+import Postdata from "./pages/Postdata";
+import Onchangeevent from "./pages/Onchangeevent";
+import SendData from "./pages/SendData";
+import FetchData from "./pages/FetchData";
+import Sonila from "./pages/Sonila";
+import Ashok from "./pages/Ashok";
+import Tandaidata from "./pages/Tandaidata";
+
+export const nameContext = createContext();
+
+export const paisadeu = createContext();
+
+// context create
+// provider sonila bicha ma rakhyarw paisa dina thalxa
 
 function App() {
   return (
     <>
       <Navbar />
       <Usestatehook />
-      <GetApi />
+
+      <paisadeu.Provider value={"50000 rs"}>
+        <Sonila />
+      </paisadeu.Provider>
+
+      <SendData />
+
+      <Tandaidata />
+
+      <nameContext.Provider value={"sagar"}>
+        <CompA />
+      </nameContext.Provider>
+
       {/* <Us /> */}
 
       <Routes>
